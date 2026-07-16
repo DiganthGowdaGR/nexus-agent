@@ -8,6 +8,8 @@ This document provides a detailed specification of the CoComputer (Nexus Agent) 
 
 Below is the layout of the system components and their networks.
 
+![System Architecture Diagram](docs/cocomputer_architecture_diagram.png)
+
 ```mermaid
 graph TB
     subgraph Client ["🖥️ Client Space (Next.js Application)"]

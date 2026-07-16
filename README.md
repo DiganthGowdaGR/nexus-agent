@@ -13,6 +13,7 @@ CoComputer is a state-of-the-art autonomous agent designed to navigate, control,
 
 ## 🏗️ Architecture Diagram
 
+![System Architecture Diagram](docs/cocomputer_architecture_diagram.png)
 
 <details>
 <summary>Click to expand full architecture details</summary>
