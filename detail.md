@@ -84,3 +84,15 @@ CoComputer coordinates multiple AI agents in a continuous loop to perceive the s
 * **Bidirectional Voice Controls:** Allows hands-free operation and conversational workspace control using Gemini Live audio streaming.
 * **Dynamic Google Drive Mounts:** Securely links user folders from Google Drive into the sandboxed VM container, facilitating immediate document creation and editing.
 * **Privacy-First BYOK Security:** Embeds a "Bring Your Own Key" system where personal API keys are encrypted locally using AES-GCM-256 before upload. Decryption keys are loaded strictly in-memory during active sessions.
+
+---
+
+## 🚀 Section 7: Final Declaration
+
+By checking the options on the submission form, the team agrees to the following declarations:
+* [x] **Project Development:** We confirm that this project was developed during AgentCon 2026.
+* [x] **Code Understanding:** We understand and can explain all submitted code.
+* [x] **Technical Verification:** We agree to participate in technical questioning and project verification.
+* [x] **Intellectual Property:** We confirm that our submission does not violate any intellectual property rights.
+* [x] **Truthfulness:** We understand that false information may result in disqualification.
+
