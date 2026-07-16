@@ -1,89 +1,95 @@
-# AgentCon 2026: Project Submission Specification
+# AgentCon 2026: Official Project Submission Form Details
 
-* **Project Title:** CoComputer: Multi-Agent Autonomous Cloud Desktop Orchestrator
-* **Selected Theme:** Building Enterprise AI Agents, ML Systems & Workflow Automation for Bharat
-* **Problem Statement Category:** Enterprise Digital Workforce / Autonomous IT Operations Agent
-* **GitHub Repository:** https://github.com/DiganthGowdaGR/nexus-agent.git
-* **Demo Video Link:** https://drive.google.com/file/d/10OmKc3QjAvpJ9E8gPc6_5KFdXsxkGJwQ/view?usp=drive_link (Walk-through of the agent's live browser control, voice, and terminal tasks)
-* **Architecture Diagram Link:** https://drive.google.com/file/d/1k-XYVvw_r8GFV3u0aPYUG7dCRm75wJI6/view?usp=drive_link
+This document contains the exact entries to be filled out on the AgentCon 2026 Final Project Submission Form.
 
 ---
 
-## 🚀 Participant Declaration & Compliance
+## 👥 Section 1: Team Information
 
-By submitting this project, the team confirms that:
-1. **Original Work:** Developed specifically during the AgentCon 2026 hackathon, without cloning existing products or using pre-existing codebases.
-2. **AI Usage Policy:** AI assistants (Gemini, Claude, Cursor) were used strictly to aid development and pair-programming; all code architecture, workflows, and logical implementation are fully understood by the participants.
-3. **Open Access:** The repository is public, and the demo video link contains no viewing restrictions for the judges.
-
----
-
-## 📋 Section 1: Project Metadata
-
-### Project Title
-`CoComputer: Multi-Agent Autonomous Cloud Desktop Orchestrator`
-
-### Selected Challenge Area
-`Enterprise Digital Workforce`
-
-### Project Short Description
-CoComputer is a state-of-the-art autonomous agent designed to navigate, control, and execute complex workflows within secure, persistent cloud-based Linux desktop environments. Powered by Google Gemini models via Vertex AI and built using the Google ADK (Agent Development Kit), it translates voice or text instructions into real-world GUI mouse clicks, keyboard operations, and terminal bash commands. The platform features low-latency bidirectional voice chats (using Gemini Live), secure session persistence, native Google Drive OAuth integration, and end-to-end encryption for user-provided API credentials.
+* **Team Name:** `GenSonic`
+* **Team Leader Name:** `SHARATH GOWDA GR`
+* **Team Leader Email:** `sharathgowdagr08@gmail.com`
+* **Team Leader Mobile Number:** `6362472664`
 
 ---
 
-## 🔍 Section 2: Detailed Solution Overview
+## 📋 Section 2: Project Information
 
-### 1. What problem does your solution solve?
-* **Manual Operational Overhead:** Enterprise workers, researchers, and SMEs spend millions of hours executing repetitive, manual digital workflows (e.g., data scraping, form-filling, system syncs, report generation).
-* **Fragility of Existing Automation:** Traditional Robotic Process Automation (RPA) tools rely on hardcoded HTML paths or CSS selectors. They break the moment a target website updates its frontend.
-* **Security & Device Interruption:** Setting up automation scripts locally locks up the user’s computer (preventing multitasking) and risks exposing local user environments to security threats.
-* **Impact for Bharat:** CoComputer provides an offloaded, secure "digital worker" executing tasks in the cloud. This frees up local computing resources and allows users (even non-technical ones) to delegate office work securely using plain language or speech.
+* **Project Title:** `CoComputer: Multi-Agent Autonomous Cloud Desktop Orchestrator`
+* **Problem Statement Selected:** `Enterprise Digital Workforce`
+* **Project Description (500 Words or Fewer):**
+  CoComputer is a state-of-the-art autonomous digital worker designed to navigate, control, and execute complex workflows within secure, persistent cloud-based Linux desktop environments. Powered by Google Gemini models via Vertex AI and built using the Google Agent Development Kit (ADK), it translates natural language voice or text instructions into real-world GUI mouse clicks, keyboard operations, and terminal bash commands.
 
----
-
-### 2. How does your AI Agent work?
-CoComputer coordinates multiple AI agents in a continuous loop to perceive the screen, think, and execute actions:
-
-1. **User Input:** The user provides a command via text or real-time voice stream (using the microphone input).
-2. **Multi-Agent Coordination (Google ADK):** A master **Orchestrator Agent** analyzes the task requirements and delegates execution steps to specialized sub-agents:
-   - **Browser Agent:** Launches Chrome, searches the web, and reads content.
-   - **Code Agent:** Installs packages, writes Python scripts, and runs terminal commands.
-   - **Computer Agent:** Manages mouse movement, scrolling, typing, and drag-and-drop operations.
-3. **The Vision-Action Loop:**
-   - The agent takes a screenshot of the remote Linux desktop.
-   - It sends the image to **Gemini Vision** to parse visual elements and locate buttons/inputs.
-   - It calculates coordinates, executes the next GUI click or keystroke, and verifies the screen changes.
-4. **Output & Streaming:** All operations happen safely in a persistent cloud sandbox, with the visual frame feed streamed live to the user interface via an embedded VNC viewer.
+  The platform coordinates a multi-agent system where a master Orchestrator Agent analyzes tasks and delegates sub-tasks to specialist sub-agents (Browser, Code, and Computer Agents) in a continuous "see-think-act" loop. It visually perceives changes on the desktop screen using real-time screenshots and Gemini Vision rather than relying on fragile HTML/CSS selectors, making it highly resilient to website updates.
+  
+  For enterprise scalability and user convenience, CoComputer supports low-latency bidirectional voice interactions via Gemini Live, complete session persistence where workspaces can be paused and resumed later, secure Google Drive OAuth syncing using rclone mounts, and a privacy-first "Bring Your Own Key" (BYOK) credential vault encrypted locally using AES-GCM-256.
 
 ---
 
-### 3. What technologies were used?
-* **Core Machine Learning & AI:**
-  - **Google Gemini 3.0 & 3.1 Pro** for complex vision perception, multi-step planning, and decision-making.
-  - **Gemini Live 2.5 Flash** for high-speed, bidirectional real-time audio interaction and transcription.
-* **Agent Framework:**
-  - **Google Agent Development Kit (ADK)** for agent hierarchy and routing logic.
-* **Backend Stack:**
-  - **Python & FastAPI** for handling REST APIs and WebSocket multiplexing.
-  - **E2B Desktop Sandbox** to spin up isolated, persistent Ubuntu Linux VM container instances.
-* **Frontend Web App:**
-  - **Next.js (React 19 & TypeScript)**, Tailwind CSS v4, Framer Motion, and noVNC visual player.
-* **Cloud Infrastructure & Data Storage:**
-  - **Google Cloud Run** for serverless container deployment.
-  - **Firebase Authentication** for user login verification.
-  - **Google Cloud Firestore** to track sessions, configurations, and user setting histories.
-  - **Google Secret Manager** for managing API keys and encryption variables.
-* **Integrations:**
-  - **Google Drive API & Rclone** for mounting and syncing files dynamically into the sandbox environment.
+## 🔍 Section 3: Solution Overview
+
+### What problem does your solution solve?
+* **Manual Operational Bottlenecks:** Knowledge workers, SMEs, and back-offices waste millions of hours on manual, repetitive web and desktop workflows (data scraping, file migrations, system updates).
+* **Fragile Traditional RPA:** Legacy Robotic Process Automation (RPA) tools rely on static HTML/CSS select elements. If a website changes its code structure, the automation immediately breaks.
+* **Infrastructure Lockup:** Running scripts locally slows down computers, occupies local input devices, and creates local security vulnerabilities.
+* **Societal & Business Impact in Bharat:** CoComputer provides an offloaded, secure "digital coworker" running remotely in the cloud. It frees local computing capacity and enables anyone to automate office tasks using natural speech.
+
+### How does your AI Agent work?
+* **Inputs:** Accepts plain language instructions via text or bidirectional microphone voice stream.
+* **Planning & Multi-Agent Collaboration:** A master Orchestrator Agent parses the goal and delegates tasks to specialized sub-agents:
+  * **Browser Agent** for web searching, navigation, and web content scraping.
+  * **Code Agent** for terminal operations, package builds, and running code.
+  * **Computer Agent** for mouse movement, key entries, and drag-and-drop actions.
+* **Vision-Action Decision Process:** The agent takes screenshots of the E2B remote Linux sandbox, reasons on the visual layout using Gemini Vision, clicks coordinates, types text, and loops until the target outcome is achieved.
+* **Outputs:** Streams the live remote desktop visually via a web-based VNC viewer and pushes final files directly to the user's mounted Google Drive.
+
+### What technologies were used?
+* **Models:** Google Gemini 3.0 & 3.1 Pro (Vision Reasoning), Gemini Live 2.5 Flash (Bidirectional Voice).
+* **Agent Framework:** Google Agent Development Kit (ADK) for hierarchical multi-agent coordination.
+* **Backend:** Python, FastAPI, and E2B Desktop Sandbox (Ubuntu VM containers).
+* **Frontend:** Next.js (React 19, TypeScript, Tailwind CSS v4, Framer Motion, and noVNC player).
+* **Cloud & DB:** Google Cloud Run (Serverless hosting), Firebase Authentication, Cloud Firestore (Metadata/History), and Google Secret Manager.
+* **Integrations:** Google Drive API & Rclone for secure, dynamic workspace syncing.
+
+### What makes your solution unique?
+* **Vision-First Automation:** Operates by visually recognizing elements on the screen, making it immune to code-level layout updates.
+* **Stateful VM Session Persistence:** Sessions are persistent, enabling long-running background tasks that survive browser disconnects.
+* **Hands-Free Bidirectional Voice UX:** Integrates Gemini Live directly into the workspace for conversational desktop commands.
+* **Google Drive Syncing:** Mounts the user's corporate/personal drive securely to read and write document files.
+* **End-to-End Encryption (BYOK):** Restricts API key handling strictly in-memory using local AES-GCM-256 decryption.
 
 ---
 
-### 4. What makes your solution unique?
-* **Screenshot-Based Vision Reasoning:** Instead of reading fragile HTML source code, CoComputer navigates by "looking" at screenshots like a human worker, making the agent robust to layout changes.
-* **Persistent Sessions:** Users can start a task, disconnect their browser, and return later to find their background task completed and the VM state saved.
-* **Bidirectional Voice Controls:** Allows hands-free operation and conversational workspace control using Gemini Live audio streaming.
-* **Dynamic Google Drive Mounts:** Securely links user folders from Google Drive into the sandboxed VM container, facilitating immediate document creation and editing.
-* **Privacy-First BYOK Security:** Embeds a "Bring Your Own Key" system where personal API keys are encrypted locally using AES-GCM-256 before upload. Decryption keys are loaded strictly in-memory during active sessions.
+## 🛠️ Section 4: Technical Submission
+
+* **GitHub Repository Link:** `https://github.com/DiganthGowdaGR/nexus-agent.git`
+* **Live Demo Link:** `Optional / Not Available`
+* **Deployed Application Link:** `Optional / Not Available`
+* **Architecture Diagram Link:** `https://drive.google.com/file/d/1k-XYVvw_r8GFV3u0aPYUG7dCRm75wJI6/view?usp=drive_link`
+
+---
+
+## 📁 Section 5: Files Upload
+
+* **PPT / PDF Presentation Link:** `https://drive.google.com/file/d/1l-MCSIqoi9KYjhkTcIPTGkZJo6TFkAIK/view?usp=sharing` (Upload this PDF/PPT file to the form input)
+* **Demo Video Link:** `https://drive.google.com/file/d/10OmKc3QjAvpJ9E8gPc6_5KFdXsxkGJwQ/view?usp=drive_link` (Upload this video file to the form input)
+
+---
+
+## 🤖 Section 6: AI & Development Declaration
+
+* **AI Tools Used:**
+  - [x] ChatGPT
+  - [x] Claude
+  - [x] Gemini
+  - [x] GitHub Copilot
+  - [x] Cursor
+  - [ ] Windsurf
+  - [ ] LangChain
+  - [ ] CrewAI
+  - [ ] AutoGen
+* **Approximate Human Contribution:**
+  - [x] Below 50%
 
 ---
 
@@ -95,4 +101,3 @@ By checking the options on the submission form, the team agrees to the following
 * [x] **Technical Verification:** We agree to participate in technical questioning and project verification.
 * [x] **Intellectual Property:** We confirm that our submission does not violate any intellectual property rights.
 * [x] **Truthfulness:** We understand that false information may result in disqualification.
-
