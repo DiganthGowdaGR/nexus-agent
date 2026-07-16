@@ -4,6 +4,17 @@
 * **Selected Theme:** Building Enterprise AI Agents, ML Systems & Workflow Automation for Bharat
 * **Problem Statement Category:** Enterprise Digital Workforce / Autonomous IT Operations Agent
 * **GitHub Repository:** https://github.com/DiganthGowdaGR/nexus-agent.git
+* **Demo Video Link:** https://youtu.be/yYetL4iX8Vs (4-minute walk-through of the agent's live browser control, voice, and terminal tasks)
+* **Architecture Diagram Path:** `docs/cocomputer_architecture_diagram.png` (Included in repository and documentation)
+
+---
+
+## 🚀 Participant Declaration & Compliance
+
+By submitting this project, the team confirms that:
+1. **Original Work:** Developed specifically during the AgentCon 2026 hackathon, without cloning existing products or using pre-existing codebases.
+2. **AI Usage Policy:** AI assistants (Gemini, Claude, Cursor) were used strictly to aid development and pair-programming; all code architecture, workflows, and logical implementation are fully understood by the participants.
+3. **Open Access:** The repository is public, and the demo video link contains no viewing restrictions for the judges.
 
 ---
 
