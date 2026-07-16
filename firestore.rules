@@ -1,0 +1,67 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isSelf(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    function sessionDoc(sessionId) {
+      return get(/databases/$(database)/documents/sessions/$(sessionId));
+    }
+
+    function isSessionMember(sessionId) {
+      return signedIn()
+        && sessionDoc(sessionId).data.memberIds is list
+        && request.auth.uid in sessionDoc(sessionId).data.memberIds;
+    }
+
+    function userBootstrapKeys() {
+      return [
+        "uid",
+        "email",
+        "displayName",
+        "photoURL",
+        "createdAt",
+        "lastLoginAt"
+      ];
+    }
+
+    function validUserBootstrapCreate(userId) {
+      return request.resource.data.uid == userId
+        && request.resource.data.keys().hasOnly(userBootstrapKeys());
+    }
+
+    function validUserBootstrapUpdate(userId) {
+      return request.resource.data.uid == userId
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(userBootstrapKeys());
+    }
+
+    match /users/{userId} {
+      allow read: if isSelf(userId);
+      allow create: if isSelf(userId) && validUserBootstrapCreate(userId);
+      allow update: if isSelf(userId) && validUserBootstrapUpdate(userId);
+      allow delete: if false;
+    }
+
+    match /userPrivate/{userId} {
+      allow read, write: if false;
+    }
+
+    match /sessions/{sessionId} {
+      allow read: if signedIn()
+        && resource.data.memberIds is list
+        && request.auth.uid in resource.data.memberIds;
+      allow write: if false;
+
+      match /messages/{messageId} {
+        allow read: if isSessionMember(sessionId);
+        allow write: if false;
+      }
+    }
+  }
+}
