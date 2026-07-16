@@ -13,7 +13,7 @@ CoComputer is a state-of-the-art autonomous agent designed to navigate, control,
 
 ## 🏗️ Architecture Diagram
 
-![System Architecture Diagram](docs/cocomputer_architecture_diagram.png)
+[![System Architecture Diagram](docs/cocomputer_architecture_diagram.png)](https://drive.google.com/file/d/1k-XYVvw_r8GFV3u0aPYUG7dCRm75wJI6/view?usp=drive_link)
 
 <details>
 <summary>Click to expand full architecture details</summary>
@@ -325,7 +325,7 @@ graph LR
 ---
 
 ## 📺 Demonstration Video
-[**Watch the 4-Minute Demo Video Here**](https://youtu.be/yYetL4iX8Vs)  
+[**Watch the Demo Video Here**](https://drive.google.com/file/d/10OmKc3QjAvpJ9E8gPc6_5KFdXsxkGJwQ/view?usp=drive_link)  
 *This video showcases the agent's ability to browse the web, execute terminal commands, and persist data across sessions using Google Drive.*
 
 ---

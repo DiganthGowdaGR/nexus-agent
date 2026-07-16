@@ -4,8 +4,8 @@
 * **Selected Theme:** Building Enterprise AI Agents, ML Systems & Workflow Automation for Bharat
 * **Problem Statement Category:** Enterprise Digital Workforce / Autonomous IT Operations Agent
 * **GitHub Repository:** https://github.com/DiganthGowdaGR/nexus-agent.git
-* **Demo Video Link:** https://youtu.be/yYetL4iX8Vs (4-minute walk-through of the agent's live browser control, voice, and terminal tasks)
-* **Architecture Diagram Path:** `docs/cocomputer_architecture_diagram.png` (Included in repository and documentation)
+* **Demo Video Link:** https://drive.google.com/file/d/10OmKc3QjAvpJ9E8gPc6_5KFdXsxkGJwQ/view?usp=drive_link (Walk-through of the agent's live browser control, voice, and terminal tasks)
+* **Architecture Diagram Link:** https://drive.google.com/file/d/1k-XYVvw_r8GFV3u0aPYUG7dCRm75wJI6/view?usp=drive_link
 
 ---
 
